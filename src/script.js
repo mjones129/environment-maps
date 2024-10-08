@@ -25,7 +25,11 @@ const scene = new THREE.Scene();
  * Environment Map
  */
 
+scene.backgroundBlurriness = 0.2;
+scene.backgroundIntensity = 5;
 gui.add(scene, "environmentIntensity").min(0).max(10).step(0.001);
+gui.add(scene, "backgroundBlurriness").min(0).max(1).step(0.001);
+gui.add(scene, "backgroundIntensity").min(0).max(10).step(0.001);
 
 //LDR cube texture
 const environmentMap = cubeTextureLoader.load([
